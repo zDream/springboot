@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-@Controller
+@RestController
 @RequestMapping("/index")
 public class LoginController {
 
@@ -26,18 +26,15 @@ public class LoginController {
     private UserService userService;
 
     @RequestMapping
-    @ResponseBody
     public String index(HttpServletRequest request, HttpServletResponse response){
         System.out.println("this is index");
-        System.out.println("this is index2222");
-        System.out.println("this is index222255");
         return "index";
     }
 
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @AuthenticationRequired(needLogin = true)
-    public @ResponseBody String login(ModelMap modelMap,HttpServletResponse response, HttpServletRequest request) throws JsonProcessingException {
+    public String login(ModelMap modelMap,HttpServletResponse response, HttpServletRequest request) throws JsonProcessingException {
         System.out.println("login dd");
         logger.info("这是logger ");
         ObjectMapper mapper = new ObjectMapper();
