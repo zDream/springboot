@@ -12,7 +12,7 @@ public class ManageUtils {
         return response;
     }
 
-    public static void setInitAjaxResponseMap(Map<String,Object> response){
+    public static void setAjaxResponseSuccess(Map<String,Object> response){
         response.put("code",ManageConstant.AJAX_SUCCESS);
     }
 }

@@ -1,7 +1,9 @@
 package tv.seei.manage.authorization.dao;
 
+import org.springframework.data.mongodb.repository.MongoRepository;
 import tv.seei.manage.authorization.entity.User;
 
-public interface UserDao  {
-    public void saveUser(User user);
+public interface UserDao extends MongoRepository<User ,Long> {
+//    void save(User user);
+    User findUserByUsernameAndPassword(String username,String password);
 }

@@ -18,7 +18,7 @@ public class ManageApplicationTests {
 	@Test
 	public void contextLoads() {
         User zhangsan = new User(12L, "zhangsan111", "1234565");
-        userDao.saveUser(zhangsan);
+        userDao.save(zhangsan);
 	}
 
 }
