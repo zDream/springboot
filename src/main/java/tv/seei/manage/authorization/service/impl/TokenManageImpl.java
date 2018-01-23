@@ -29,7 +29,7 @@ public class TokenManageImpl implements TokenManage {
     private StringRedisTemplate stringRedisTemplate;
 
     @Override
-    public TokenModel createToken(long userId) {
+    public TokenModel createToken(String userId) {
         String token = String.valueOf(userId) + System.currentTimeMillis()+new Random().nextLong()+"";
         logger.info("token = "+token);
         try {
@@ -67,7 +67,7 @@ public class TokenManageImpl implements TokenManage {
     }
 
     @Override
-    public void deleteToken(long userId) {
+    public void deleteToken(String userId) {
 
     }
 }

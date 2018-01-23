@@ -2,21 +2,21 @@ package tv.seei.manage.authorization.entity;
 
 public class TokenModel {
     //用户id
-    private long userId;
+    private String userId;
 
     //随机生成的uuid
     private String token;
 
-    public TokenModel(long userId, String token) {
+    public TokenModel(String userId, String token) {
         this.userId = userId;
         this.token = token;
     }
 
-    public long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

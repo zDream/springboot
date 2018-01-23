@@ -4,4 +4,5 @@ import tv.seei.manage.authorization.entity.User;
 
 public interface UserService {
     public void save(User user);
+    public User getUserbyUserName(String username);
 }

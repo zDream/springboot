@@ -64,7 +64,7 @@ public class AuthenticationAspect {
                     TokenModel new_token = tokenManage.createToken(user.getId());
                     modelMap.addAttribute("token",new_token.getToken());
                 }else {
-                    response.sendRedirect("/index");
+                    response.sendRedirect("/index?msg=用户名或者密码输入错误");
                     return "";
                 }
             }else {

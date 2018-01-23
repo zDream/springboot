@@ -1,4 +1,4 @@
-package tv.seei.manage.authorization.config;
+package tv.seei.manage.base.config.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,8 +27,8 @@ public class Swagger2 {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("xx项目 RESTful APIs")
-                .description("xx项目后台api接口文档")
+                .title("后台管理项目 RESTful APIs")
+                .description("manage项目后台api接口文档")
                 .version("1.0")
                 .build();
     }

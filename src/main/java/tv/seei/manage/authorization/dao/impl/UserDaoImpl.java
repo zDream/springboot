@@ -16,9 +16,9 @@ public class UserDaoImpl {
     private MongoTemplate mongoTemplate;
 
 //    @Override
-    public void save(User user) {
-        mongoTemplate.save(user);
-    }
+//    public void save(User user) {
+//        mongoTemplate.save(user);
+//    }
 
 //    @Override
     public User get(int id) {
