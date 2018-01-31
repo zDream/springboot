@@ -44,10 +44,13 @@ public class TokenManageImpl implements TokenManage {
         ValueOperations<String, String> ops = this.stringRedisTemplate.opsForValue();
         logger.info(" 加密 token "+token);
         if (!this.stringRedisTemplate.hasKey(userId+"")) {
-            ops.set(userId+"", token);
+//            ops.set(userId+"", token);
+            ops.set(userId+"",token,20,TimeUnit.SECONDS);
             System.out.println("set key success");
         } else {
             // 存在则打印之前的value值
+            token=ops.get(userId+"");
+            ops.set(userId+"",token,20,TimeUnit.SECONDS);
             System.out.println("this key = " + ops.get(userId+""));
         }
 
