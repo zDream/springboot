@@ -18,6 +18,19 @@ spring:
     host: 127.0.0.1
     port: 6379
 
+  #sql Server 配置
+  datasource:
+      url: jdbc:sqlserver://localhost:1433;databaseName=student
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      username: sa
+      password: 123456
+  #jpa 配置
+  jpa:
+    database: sql_server
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
 
 #log 日志配置
 logging:
